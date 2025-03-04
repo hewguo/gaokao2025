@@ -241,7 +241,7 @@ def getMajorScore(college_name,province,year):
 		respText=response.text
 		# print(respText)
 		respJson=json.loads(respText)
-		# print(url)
+		print(url)
 		majorscores=None
 		try:
 			if respJson["errno"]!=0:
@@ -258,8 +258,8 @@ def getMajorScore(college_name,province,year):
 					bFlag=False
 				else:
 					for majorscore in majorscores :
-						insertMajorScore(majorscore)
-						# print(majorscore)
+						# insertMajorScore(majorscore)
+						print(majorscore)
 					print(college_name,"-",province,"-",year,"-","查询成功！")
 		except:
 			bFlag=False
@@ -404,7 +404,7 @@ def getCollegePlan():
 # getAllSchool()
 # print(getSchoolList(1))
 # getMajorScoreNear5Byhread("浙江")
-# getMajorScore("宁波大学","浙江",2024)
+getMajorScore("宁波大学","浙江",2024)
 # getMajorScoreNear5Byhread("浙江")
 # getCollegePlanFromUrl("浙江大学","浙江","2024","22","10")
-getCollegePlan()
+# getCollegePlan()
